@@ -1,7 +1,10 @@
 import { Injectable, OnInit } from '@angular/core';
 import { DiffMatchPatch, DiffOp } from './diffMatchPatch';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+  useFactory: () => new DiffMatchPatchService(new DiffMatchPatch())
+})
 export class DiffMatchPatchService implements OnInit {
 
   constructor(private dmp: DiffMatchPatch) {   }
