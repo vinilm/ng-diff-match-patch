@@ -2114,12 +2114,16 @@ class DiffMatchPatchService {
     getDmp() {
         return this.dmp;
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: DiffMatchPatchService, deps: [{ token: DiffMatchPatch }], target: i0.ɵɵFactoryTarget.Injectable }); }
-    static { this.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: DiffMatchPatchService }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DiffMatchPatchService, deps: [{ token: DiffMatchPatch }], target: i0.ɵɵFactoryTarget.Injectable }); }
+    static { this.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DiffMatchPatchService, providedIn: 'root', useFactory: () => new DiffMatchPatchService(new DiffMatchPatch()) }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: DiffMatchPatchService, decorators: [{
-            type: Injectable
-        }], ctorParameters: function () { return [{ type: DiffMatchPatch }]; } });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DiffMatchPatchService, decorators: [{
+            type: Injectable,
+            args: [{
+                    providedIn: 'root',
+                    useFactory: () => new DiffMatchPatchService(new DiffMatchPatch())
+                }]
+        }], ctorParameters: () => [{ type: DiffMatchPatch }] });
 
 class LineCompareComponent {
     constructor(dmp) {
@@ -2243,8 +2247,8 @@ class LineCompareComponent {
             diffCalculation.lineRight++;
         }
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: LineCompareComponent, deps: [{ token: DiffMatchPatchService }], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.1.4", type: LineCompareComponent, selector: "dmp-line-compare", inputs: { left: "left", right: "right", lineContextSize: "lineContextSize" }, usesOnChanges: true, ngImport: i0, template: `
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: LineCompareComponent, deps: [{ token: DiffMatchPatchService }], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.2.13", type: LineCompareComponent, selector: "dmp-line-compare", inputs: { left: "left", right: "right", lineContextSize: "lineContextSize" }, usesOnChanges: true, ngImport: i0, template: `
     <div class="dmp-line-compare-no-changes-text" *ngIf="isContentEqual">
       There are no changes to display.
     </div>    
@@ -2266,7 +2270,7 @@ class LineCompareComponent {
     </div>
   `, isInline: true, styles: ["div.dmp-line-compare{display:flex;flex-direction:row;border:1px solid #808080;font-family:Consolas,Courier,monospace;width:911px}div.dmp-line-compare-margin{width:101px}div.dmp-line-compare-content{position:relative;top:0;left:0;flex-grow:1;overflow-x:scroll}div.dmp-line-compare-content-wrapper{position:absolute;top:0;left:0;display:flex;flex-direction:column;align-items:stretch}div.dmp-line-compare-left{width:50px;text-align:center;color:#484848}div.dmp-line-compare-equal>div.dmp-line-compare-left,div.dmp-line-compare-equal>div.dmp-line-compare-right{background-color:#dedede}div.dmp-line-compare-insert>div.dmp-line-compare-left,div.dmp-line-compare-insert>div.dmp-line-compare-right{background-color:#8bfb6f}div.dmp-line-compare-delete>div.dmp-line-compare-left,div.dmp-line-compare-delete>div.dmp-line-compare-right{background-color:#f56868}div.dmp-line-compare-right{width:50px;text-align:center;color:#484848;border-right:1px solid #888888}div.dmp-line-compare-text{white-space:pre;padding-left:10px;min-width:800px}.dmp-line-compare-delete{background-color:#ff8c8c}.dmp-line-compare-insert{background-color:#9dff97}.dmp-line-compare-delete>div{display:inline-block}.dmp-line-compare-insert>div{display:inline-block}.dmp-line-compare-equal>div{display:inline-block}.dmp-margin-bottom-spacer{height:20px;background-color:#dedede;border-right:1px solid #888888}\n"], dependencies: [{ kind: "directive", type: i2.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { kind: "directive", type: i2.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i2.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: LineCompareComponent, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: LineCompareComponent, decorators: [{
             type: Component,
             args: [{ selector: 'dmp-line-compare', template: `
     <div class="dmp-line-compare-no-changes-text" *ngIf="isContentEqual">
@@ -2289,7 +2293,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.4", ngImpor
       </div>
     </div>
   `, styles: ["div.dmp-line-compare{display:flex;flex-direction:row;border:1px solid #808080;font-family:Consolas,Courier,monospace;width:911px}div.dmp-line-compare-margin{width:101px}div.dmp-line-compare-content{position:relative;top:0;left:0;flex-grow:1;overflow-x:scroll}div.dmp-line-compare-content-wrapper{position:absolute;top:0;left:0;display:flex;flex-direction:column;align-items:stretch}div.dmp-line-compare-left{width:50px;text-align:center;color:#484848}div.dmp-line-compare-equal>div.dmp-line-compare-left,div.dmp-line-compare-equal>div.dmp-line-compare-right{background-color:#dedede}div.dmp-line-compare-insert>div.dmp-line-compare-left,div.dmp-line-compare-insert>div.dmp-line-compare-right{background-color:#8bfb6f}div.dmp-line-compare-delete>div.dmp-line-compare-left,div.dmp-line-compare-delete>div.dmp-line-compare-right{background-color:#f56868}div.dmp-line-compare-right{width:50px;text-align:center;color:#484848;border-right:1px solid #888888}div.dmp-line-compare-text{white-space:pre;padding-left:10px;min-width:800px}.dmp-line-compare-delete{background-color:#ff8c8c}.dmp-line-compare-insert{background-color:#9dff97}.dmp-line-compare-delete>div{display:inline-block}.dmp-line-compare-insert>div{display:inline-block}.dmp-line-compare-equal>div{display:inline-block}.dmp-margin-bottom-spacer{height:20px;background-color:#dedede;border-right:1px solid #888888}\n"] }]
-        }], ctorParameters: function () { return [{ type: DiffMatchPatchService }]; }, propDecorators: { left: [{
+        }], ctorParameters: () => [{ type: DiffMatchPatchService }], propDecorators: { left: [{
                 type: Input
             }], right: [{
                 type: Input
@@ -2331,15 +2335,15 @@ class DiffDirective {
         html += '</div>';
         return html;
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: DiffDirective, deps: [{ token: i0.ElementRef }, { token: DiffMatchPatchService }], target: i0.ɵɵFactoryTarget.Directive }); }
-    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "16.1.4", type: DiffDirective, selector: "[diff]", inputs: { left: "left", right: "right" }, usesOnChanges: true, ngImport: i0 }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DiffDirective, deps: [{ token: i0.ElementRef }, { token: DiffMatchPatchService }], target: i0.ɵɵFactoryTarget.Directive }); }
+    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "18.2.13", type: DiffDirective, selector: "[diff]", inputs: { left: "left", right: "right" }, usesOnChanges: true, ngImport: i0 }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: DiffDirective, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DiffDirective, decorators: [{
             type: Directive,
             args: [{
                     selector: '[diff]'
                 }]
-        }], ctorParameters: function () { return [{ type: i0.ElementRef }, { type: DiffMatchPatchService }]; }, propDecorators: { left: [{
+        }], ctorParameters: () => [{ type: i0.ElementRef }, { type: DiffMatchPatchService }], propDecorators: { left: [{
                 type: Input
             }], right: [{
                 type: Input
@@ -2383,15 +2387,15 @@ class LineDiffDirective {
         html += '</div>';
         return html;
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: LineDiffDirective, deps: [{ token: i0.ElementRef }, { token: DiffMatchPatchService }], target: i0.ɵɵFactoryTarget.Directive }); }
-    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "16.1.4", type: LineDiffDirective, selector: "[lineDiff]", inputs: { left: "left", right: "right" }, usesOnChanges: true, ngImport: i0 }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: LineDiffDirective, deps: [{ token: i0.ElementRef }, { token: DiffMatchPatchService }], target: i0.ɵɵFactoryTarget.Directive }); }
+    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "18.2.13", type: LineDiffDirective, selector: "[lineDiff]", inputs: { left: "left", right: "right" }, usesOnChanges: true, ngImport: i0 }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: LineDiffDirective, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: LineDiffDirective, decorators: [{
             type: Directive,
             args: [{
                     selector: '[lineDiff]',
                 }]
-        }], ctorParameters: function () { return [{ type: i0.ElementRef }, { type: DiffMatchPatchService }]; }, propDecorators: { left: [{
+        }], ctorParameters: () => [{ type: i0.ElementRef }, { type: DiffMatchPatchService }], propDecorators: { left: [{
                 type: Input
             }], right: [{
                 type: Input
@@ -2432,15 +2436,15 @@ class ProcessingDiffDirective {
         html += '</div>';
         return html;
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: ProcessingDiffDirective, deps: [{ token: i0.ElementRef }, { token: DiffMatchPatchService }], target: i0.ɵɵFactoryTarget.Directive }); }
-    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "16.1.4", type: ProcessingDiffDirective, selector: "[processingDiff]", inputs: { left: "left", right: "right" }, usesOnChanges: true, ngImport: i0 }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: ProcessingDiffDirective, deps: [{ token: i0.ElementRef }, { token: DiffMatchPatchService }], target: i0.ɵɵFactoryTarget.Directive }); }
+    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "18.2.13", type: ProcessingDiffDirective, selector: "[processingDiff]", inputs: { left: "left", right: "right" }, usesOnChanges: true, ngImport: i0 }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: ProcessingDiffDirective, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: ProcessingDiffDirective, decorators: [{
             type: Directive,
             args: [{
                     selector: '[processingDiff]'
                 }]
-        }], ctorParameters: function () { return [{ type: i0.ElementRef }, { type: DiffMatchPatchService }]; }, propDecorators: { left: [{
+        }], ctorParameters: () => [{ type: i0.ElementRef }, { type: DiffMatchPatchService }], propDecorators: { left: [{
                 type: Input
             }], right: [{
                 type: Input
@@ -2493,23 +2497,23 @@ class SemanticDiffDirective {
         html += '</div>';
         return html;
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: SemanticDiffDirective, deps: [{ token: i0.ElementRef }, { token: DiffMatchPatchService }], target: i0.ɵɵFactoryTarget.Directive }); }
-    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "16.1.4", type: SemanticDiffDirective, selector: "[semanticDiff]", inputs: { left: "left", right: "right" }, usesOnChanges: true, ngImport: i0 }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: SemanticDiffDirective, deps: [{ token: i0.ElementRef }, { token: DiffMatchPatchService }], target: i0.ɵɵFactoryTarget.Directive }); }
+    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "18.2.13", type: SemanticDiffDirective, selector: "[semanticDiff]", inputs: { left: "left", right: "right" }, usesOnChanges: true, ngImport: i0 }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: SemanticDiffDirective, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: SemanticDiffDirective, decorators: [{
             type: Directive,
             args: [{
                     selector: '[semanticDiff]'
                 }]
-        }], ctorParameters: function () { return [{ type: i0.ElementRef }, { type: DiffMatchPatchService }]; }, propDecorators: { left: [{
+        }], ctorParameters: () => [{ type: i0.ElementRef }, { type: DiffMatchPatchService }], propDecorators: { left: [{
                 type: Input
             }], right: [{
                 type: Input
             }] } });
 
 class DiffMatchPatchModule {
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: DiffMatchPatchModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
-    static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.1.4", ngImport: i0, type: DiffMatchPatchModule, declarations: [DiffDirective,
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DiffMatchPatchModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
+    static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "18.2.13", ngImport: i0, type: DiffMatchPatchModule, declarations: [DiffDirective,
             LineDiffDirective,
             ProcessingDiffDirective,
             SemanticDiffDirective,
@@ -2518,12 +2522,9 @@ class DiffMatchPatchModule {
             ProcessingDiffDirective,
             SemanticDiffDirective,
             LineCompareComponent] }); }
-    static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: DiffMatchPatchModule, providers: [
-            DiffMatchPatch,
-            DiffMatchPatchService
-        ], imports: [CommonModule] }); }
+    static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DiffMatchPatchModule, imports: [CommonModule] }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.4", ngImport: i0, type: DiffMatchPatchModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: DiffMatchPatchModule, decorators: [{
             type: NgModule,
             args: [{
                     declarations: [
@@ -2544,8 +2545,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.4", ngImpor
                         LineCompareComponent
                     ],
                     providers: [
-                        DiffMatchPatch,
-                        DiffMatchPatchService
+                    // DiffMatchPatch
+                    // DiffMatchPatchService
                     ]
                 }]
         }] });

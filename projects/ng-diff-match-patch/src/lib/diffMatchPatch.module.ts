@@ -28,8 +28,8 @@ import { DiffMatchPatchService } from './diffMatchPatch.service';
     LineCompareComponent
   ],
   providers: [
-    DiffMatchPatch,
-    DiffMatchPatchService
+    // DiffMatchPatch,
+    // DiffMatchPatchService
   ]
 })
 export class DiffMatchPatchModule { }
